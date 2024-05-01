@@ -21,17 +21,17 @@ def add_contact(args, contacts):
             if answer.lower() == "yes":
                 new_name = input("Enter the new name: ")
                 add_contact((new_name, phone), contacts)
-                return ("Contact with new name added.")
+                return "Contact with new name added."
             else:
                 contacts[name] = phone
-                return (f"Contact {name} is changed")
+                return f"Contact {name} is changed"
         else:
             contacts[name] = phone
-            return ("Contact added.")
+            return "Contact added."
     except ValueError:
-        print("Please write two values: name and phone")
+        return "Please write two values: name and phone"
     except Exception as e:
-        print(f"An unexpected error {e} occurred ")
+        return f"An unexpected error {e} occurred "
 
 
 def show_phone(name, contacts):
@@ -41,8 +41,8 @@ def show_phone(name, contacts):
         else:
             return (f"Error: No contact found with the name '{name}'.")
     except Exception as e:
-        print(f"An unexpected error {e} occurred."
-              f" Please enter 'phone <name>' to get the phone ")
+        return (f"An unexpected error {e} occurred."
+                f" Please enter 'phone <name>' to get the phone ")
 
 
 def show_all(contacts):
@@ -52,8 +52,8 @@ def show_all(contacts):
             all_contacts.append((name, phone))
         return all_contacts
     except Exception as e:
-        print(f"An unexpected error {e} occurred."
-              f" Please enter  'all' to get the list of all contacts ")
+        return (f"An unexpected error {e} occurred."
+                f" Please enter  'all' to get the list of all contacts ")
 
 
 def main():
