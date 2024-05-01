@@ -1,5 +1,4 @@
-
-commands_list =[
+commands_list = [
     " enter 'close', 'exit' - to stop the bot",
     " enter 'hello', - to enter the command",
     " enter 'phone <name>' - to get the phone of the contact",
@@ -33,9 +32,6 @@ def add_contact(args, contacts):
         print("Please write two values: name and phone")
     except Exception as e:
         print(f"An unexpected error {e} occurred ")
-
-
-
 
 
 def show_phone(name, contacts):
@@ -96,7 +92,6 @@ def main():
 
     except Exception as e:
         print(f"An unexpected error {e} occurred.")
-
 
 
 if __name__ == "__main__":
